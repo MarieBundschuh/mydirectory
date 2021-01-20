@@ -20,15 +20,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+/*@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MydirectoryApplication.class)
 @WebAppConfiguration
 @ActiveProfiles("local")
 @TestPropertySource(properties = {
         "amazon.dynamodb.endpoint=http://localhost:8000/",
         "amazon.aws.accesskey=test1",
-        "amazon.aws.secretkey=test231" })
-public class ClientsIntegrationTest {
+        "amazon.aws.secretkey=test231" })*/
+public class GenericIntegrationTest {
 
     @Autowired
     private DynamoDBMapper dynamoDBMapper;

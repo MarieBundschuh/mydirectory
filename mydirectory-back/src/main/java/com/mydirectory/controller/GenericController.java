@@ -16,19 +16,19 @@ public class GenericController {
     private GenericRepository genericRepository;
 
     @ApiOperation(value = "Récupère un item selon un id")
-    @GetMapping("/clients/{id}")
+    @GetMapping("/items/{id}")
     public String getItem(@PathVariable("id") String id){
         return genericRepository.getById(id);
     }
 
     @ApiOperation(value = "Récupère la liste de tous les items")
-    @GetMapping("/clients/")
+    @GetMapping("/items/")
     public List<String> getAllItems(){
         return genericRepository.getAll();
     }
 
     @ApiOperation(value = "Sauvegarde un item")
-    @PostMapping("/clients/")
+    @PostMapping("/items/")
     public String saveItem(@RequestBody String jsonString){
         genericRepository.save(jsonString);
         return jsonString;
